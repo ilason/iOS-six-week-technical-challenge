@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bre-65-9Ps">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" id="Bre-65-9Ps">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bre-65-9Ps" id="hww-KH-PEf">
@@ -28,11 +28,67 @@
                             <outlet property="delegate" destination="OSa-0y-OpP" id="v0r-dl-N52"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6re-YS-WvK"/>
+                    <navigationItem key="navigationItem" id="6re-YS-WvK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tg0-cw-f5r">
+                            <connections>
+                                <segue destination="sEg-7A-6Ih" kind="show" identifier="addToDetail" id="U5j-8L-8xr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWu-FP-c5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1324" y="393"/>
+        </scene>
+        <!--Entry Detail View Controller-->
+        <scene sceneID="G6t-9u-aZI">
+            <objects>
+                <viewController id="sEg-7A-6Ih" customClass="EntryDetailViewController" customModule="Six_Week_Technical_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="isQ-hz-OLG"/>
+                        <viewControllerLayoutGuide type="bottom" id="FhK-iI-QAs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sRu-jF-bQr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sb3-m8-AG7">
+                                <rect key="frame" x="179" y="285" width="243" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="CV0-Fi-XYI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvW-96-6cp">
+                                <rect key="frame" x="264" y="204" width="72" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="ynQ-kl-2dM"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="addButton"/>
+                                <state key="selected" image="Image"/>
+                                <state key="highlighted" image="Image"/>
+                                <connections>
+                                    <action selector="addPersonButtonTapped:" destination="sEg-7A-6Ih" eventType="touchUpInside" id="wk1-Gh-Xif"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sb3-m8-AG7" firstAttribute="centerX" secondItem="ZvW-96-6cp" secondAttribute="centerX" id="0e0-KQ-9vI"/>
+                            <constraint firstItem="sb3-m8-AG7" firstAttribute="top" secondItem="isQ-hz-OLG" secondAttribute="bottom" constant="221" id="ra5-Xj-BXz"/>
+                            <constraint firstItem="ZvW-96-6cp" firstAttribute="top" secondItem="isQ-hz-OLG" secondAttribute="bottom" constant="140" id="sYt-ps-pFF"/>
+                            <constraint firstItem="sb3-m8-AG7" firstAttribute="top" secondItem="ZvW-96-6cp" secondAttribute="bottom" constant="13" id="uf2-q7-eWQ"/>
+                            <constraint firstItem="sb3-m8-AG7" firstAttribute="centerX" secondItem="sRu-jF-bQr" secondAttribute="centerX" id="zUb-Vv-HbT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="sb3-m8-AG7" id="2n7-U0-Gef"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgY-oI-xJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2089" y="393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E0v-ZR-zzz">
@@ -53,4 +109,8 @@
             <point key="canvasLocation" x="512" y="393"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="400" height="400"/>
+        <image name="addButton" width="215" height="193"/>
+    </resources>
 </document>

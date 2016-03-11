@@ -14,6 +14,7 @@
 		E5818E621C932AA700031E54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5818E601C932AA700031E54 /* Main.storyboard */; };
 		E5818E641C932AA700031E54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5818E631C932AA700031E54 /* Assets.xcassets */; };
 		E5818E671C932AA700031E54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5818E651C932AA700031E54 /* LaunchScreen.storyboard */; };
+		E5F3C4F61C93401100856886 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F3C4F51C93401100856886 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E5818E631C932AA700031E54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5818E661C932AA700031E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5818E681C932AA700031E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5F3C4F51C93401100856886 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				E5818E5C1C932AA700031E54 /* AppDelegate.swift */,
 				E5818E601C932AA700031E54 /* Main.storyboard */,
+				E5F3C4F51C93401100856886 /* EntryDetailViewController.swift */,
 				E556F89D1C93358800ADC45F /* NameListTableViewController.swift */,
 				E556F89B1C9330F800ADC45F /* EntryController.swift */,
 				E556F8991C932F2600ADC45F /* NameEntries.swift */,
@@ -145,6 +148,7 @@
 				E556F89E1C93358800ADC45F /* NameListTableViewController.swift in Sources */,
 				E556F89C1C9330F800ADC45F /* EntryController.swift in Sources */,
 				E5818E5D1C932AA700031E54 /* AppDelegate.swift in Sources */,
+				E5F3C4F61C93401100856886 /* EntryDetailViewController.swift in Sources */,
 				E556F89A1C932F2600ADC45F /* NameEntries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

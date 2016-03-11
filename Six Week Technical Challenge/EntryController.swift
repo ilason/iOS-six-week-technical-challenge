@@ -11,6 +11,8 @@ import Foundation
 class EntryController {
     var names: [NameEntries]
     
+    static let sharedController = EntryController()
+    
     init () {
         self.names = []
         

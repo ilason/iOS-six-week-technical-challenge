@@ -9,7 +9,22 @@
 import Foundation
 
 class EntryController {
-    var entries: [NameEntries]
+    var names: [NameEntries]
     
+    init () {
+        self.names = []
+        
+    }
     
+    func addName (name: NameEntries) {
+        names.append(name)
+        
+        
+    }
+    
+    func removeName (name: NameEntries) {
+        if let nameIndex = names.indexOf(name) {
+            names.removeAtIndex(nameIndex)
+        }
+    }
 }

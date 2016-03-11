@@ -20,17 +20,16 @@ class NameEntries: Equatable {
     init?(dictionary: Dictionary<String, AnyObject>) {
         guard let nameOfPerson = dictionary[nameOfPersonKey] as? String else {
             
-            self.nameOfPerson = String()
-            
-            return nil
-    }
+            self.nameOfPerson = ""
+            return 
+        }
         self.nameOfPerson = nameOfPerson
-}
-
+    }
+    
     func dictionaryCopy() -> Dictionary<String, AnyObject> {
         let dictionary = [
-            nameOfPerson : self.nameOfPerson
-        
+            nameOfPersonKey : self.nameOfPerson
+            
         ]
         
         return dictionary

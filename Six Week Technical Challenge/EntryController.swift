@@ -35,7 +35,7 @@ class EntryController {
     func loadFromPersistentStorage() {
         let entryDictionariesFromDefaults = NSUserDefaults.standardUserDefaults().objectForKey(entriesKey) as? [Dictionary<String, AnyObject>]
         if let entryDictionaries = entryDictionariesFromDefaults {
-            self.names = entryDictionaries.map({NameEntries(dictionary: $0)!})
+            self.names = entryDictionaries.flatMap({NameEntries(dictionary: $0)!})
         }
     }
     

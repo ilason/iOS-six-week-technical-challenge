@@ -19,7 +19,9 @@ class NameEntries: Equatable {
     
     init?(dictionary: Dictionary<String, AnyObject>) {
         guard let nameOfPerson = dictionary[nameOfPersonKey] as? String else {
-            self.nameOfPerson = ""
+            
+            self.nameOfPerson = String()
+            
             return nil
     }
         self.nameOfPerson = nameOfPerson
